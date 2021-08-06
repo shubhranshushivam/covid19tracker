@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #navbar{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        color: aliceblue;
+        top: 0px;
+        font-size: 34px;
+        height: 65px;
+        font-family: 'Courier Prime', monospace;
+    
+        /* padding-left: 50px; */
+    }
+    #navbar::before{
+        content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    }
+    #logo{
+        height: 46px;
+        padding-right: 50px;
+    
+    }
+    #map{
+        width: 100vw;
+        height: 90vh;
+    }
+</style>
+    <title>Shubhranshu Covid-19 Map</title>
+</head>
+<body>
+    <nav id="navbar">
+        <img src="/circle-cropped.jpg.jpg" alt="" id="logo">
+        Shubhranshu's COVID-19 Live Tracker
+    </nav>
+    <div id='map'></div>
+
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2h1YmhyYW5zaHVzaGl2YW0iLCJhIjoiY2tmZWRjYm1zMDFiMTJ5bDRnYnV0OGthdCJ9.iH5NQ3G9_hl6QmUDJCkqhA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom:1.5,
+    center:[0,30]
+  });
+</script>
+
+
+<script src="index.js"></script>
+</html>
